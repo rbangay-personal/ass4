@@ -16,7 +16,7 @@ for filename in os.listdir(TEST_FACES):
     if True in results:
         if "real" in filename:
             true_positives += 1
-        else
+        else:
             false_positives += 1
         print("Access Granted" + " " + filename)
     else:
