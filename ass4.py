@@ -23,4 +23,4 @@ for filename in os.listdir(TEST_FACES):
     else:
         print("Access Denied" + " " + filename)
 
-print("true: " + true_positives + '\n' + "false: " + false_positives)
+print("true: " + str(true_positives) + '\n' + "false: " + str(false_positives))
