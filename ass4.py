@@ -23,7 +23,7 @@ for value in tolerance:
         image = face_recognition.load_image_file(f"{TEST_FACES}/{filename}")
         if len(face_recognition.face_encodings(image, model="cnn")) != 0:
             face = face_recognition.face_encodings(image, model="cnn")[0]
-            results = face_recognition.compare_faces([realID], face, 0.6)
+            results = face_recognition.compare_faces([realID], face, 0.1)
         else:
             continue
 
