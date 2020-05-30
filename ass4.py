@@ -21,3 +21,5 @@ for filename in os.listdir(TEST_FACES):
         print("Access Granted" + " " + filename)
     else:
         print("Access Denied" + " " + filename)
+
+print("true: " + true_positives + '\n' + "false: " + false_positives)
