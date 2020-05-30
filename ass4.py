@@ -1,12 +1,13 @@
 import face_recognition
 import os
 
+
 def frange(start, stop, step):
-    ''' "range()" like function which accept float type'''
     i = start
-    while i < stop:
+    while i <= stop:
         yield i
         i += step
+
 
 TEST_FACES = "test_faces"
 
@@ -19,7 +20,6 @@ tolerance = frange(0, 1, 0.1)
 for value in tolerance:
     print(value)
     for filename in os.listdir(TEST_FACES):
-        print(filename)
         image = face_recognition.load_image_file(f"{TEST_FACES}/{filename}")
         if len(face_recognition.face_encodings(image, model="cnn")) != 0:
             face = face_recognition.face_encodings(image, model="cnn")[0]
