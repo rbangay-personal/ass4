@@ -8,6 +8,7 @@ false_positives = 0
 
 image = face_recognition.load_image_file(f"image_0001.jpg")
 realID = face_recognition.face_encodings(image)[0]
+print(type(realID))
 tolerance = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 for value in tolerance:
     print("tolerance: " + str(value))
