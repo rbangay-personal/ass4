@@ -16,7 +16,7 @@ false_positives = 0
 
 image = face_recognition.load_image_file(f"image_0001.jpg")
 realID = face_recognition.face_encodings(image)[0]
-tolerance = frange(0.1, 0.9, 0.1)
+tolerance = list(frange(0.1, 0.9, 0.1))
 print(tolerance)
 for value in tolerance:
     print(type(value))
@@ -24,7 +24,7 @@ for value in tolerance:
         image = face_recognition.load_image_file(f"{TEST_FACES}/{filename}")
         if len(face_recognition.face_encodings(image, model="cnn")) != 0:
             face = face_recognition.face_encodings(image, model="cnn")[0]
-            results = face_recognition.compare_faces([realID], face, 0.1)
+            results = face_recognition.compare_faces([realID], face, tolerance)
         else:
             continue
 
