@@ -17,6 +17,7 @@ false_positives = 0
 image = face_recognition.load_image_file(f"image_0001.jpg")
 realID = face_recognition.face_encodings(image)[0]
 tolerance = frange(0.1, 0.9, 0.1)
+print(tolerance)
 for value in tolerance:
     print(type(value))
     for filename in os.listdir(TEST_FACES):
