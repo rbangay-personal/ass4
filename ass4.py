@@ -34,6 +34,5 @@ for value in tolerance:
             # print("Access Granted" + " " + filename)
         else:
             # print("Access Denied" + " " + filename)
-
     print("true: " + str(true_positives) + '\n' + "false: " + str(false_positives))
 
