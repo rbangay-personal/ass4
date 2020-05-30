@@ -3,7 +3,7 @@ import os
 
 
 def frange(start, stop, step):
-    i = start
+    (i) = start
     while i <= stop:
         yield i
         i += step
@@ -18,7 +18,7 @@ image = face_recognition.load_image_file(f"image_0001.jpg")
 realID = face_recognition.face_encodings(image)[0]
 tolerance = frange(0.1, 0.9, 0.1)
 for value in tolerance:
-    print(value)
+    print(type(value))
     for filename in os.listdir(TEST_FACES):
         image = face_recognition.load_image_file(f"{TEST_FACES}/{filename}")
         if len(face_recognition.face_encodings(image, model="cnn")) != 0:
